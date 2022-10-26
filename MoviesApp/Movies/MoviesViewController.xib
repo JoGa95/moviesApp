@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviesViewController" customModule="MoviesApp" customModuleProvider="target">
+            <connections>
+                <outlet property="categoriesSegmentedControl" destination="gha-43-Rsg" id="cjm-20-2se"/>
+                <outlet property="moviesCollectionView" destination="8at-Py-RIH" id="4W2-cI-BKe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gha-43-Rsg">
+                    <rect key="frame" x="20" y="68" width="374" height="32"/>
+                    <color key="backgroundColor" name="NavigationBarBackground"/>
+                    <segments>
+                        <segment title="Popular"/>
+                        <segment title="Top Rated"/>
+                        <segment title="On TV"/>
+                        <segment title="Airing Today"/>
+                    </segments>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="selectedSegmentTintColor" name="DarkGray"/>
+                    <connections>
+                        <action selector="segmentedControllTapped:" destination="-1" eventType="valueChanged" id="4ZZ-AM-qRa"/>
+                    </connections>
+                </segmentedControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="8at-Py-RIH">
+                    <rect key="frame" x="0.0" y="123" width="414" height="715"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="aLK-5A-KFK">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="8at-Py-RIH" secondAttribute="bottom" constant="24" id="0G4-jf-LEg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8at-Py-RIH" secondAttribute="trailing" id="YYb-IO-TGr"/>
+                <constraint firstItem="gha-43-Rsg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="eDx-fr-Jei"/>
+                <constraint firstItem="8at-Py-RIH" firstAttribute="top" secondItem="gha-43-Rsg" secondAttribute="bottom" constant="24" id="fKQ-Fg-7A5"/>
+                <constraint firstItem="8at-Py-RIH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ihw-DE-k5N"/>
+                <constraint firstItem="gha-43-Rsg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="l16-8x-CqH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gha-43-Rsg" secondAttribute="trailing" constant="20" id="zHO-Gi-hp9"/>
+            </constraints>
+            <point key="canvasLocation" x="133" y="62"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="DarkGray">
+            <color red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavigationBarBackground">
+            <color red="0.18823529411764706" green="0.21568627450980393" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

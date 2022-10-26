@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MoviesDetailCell" id="gTV-IL-0wX" customClass="MoviesDetailCollectionViewCell" customModule="MoviesApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="252" height="265"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="252" height="265"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" restorationIdentifier="MoviesCollectionViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="Edq-IR-En5" userLabel="Container View">
+                        <rect key="frame" x="0.0" y="0.0" width="252" height="265"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gGc-rd-TIi">
+                                <rect key="frame" x="10" y="10" width="232" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="DFS-Jq-KLk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="286-8C-QKd">
+                                <rect key="frame" x="10" y="170" width="232" height="95"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" name="DarkGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bZa-gD-KK6"/>
+                        <color key="backgroundColor" name="NavigationBarBackground"/>
+                        <constraints>
+                            <constraint firstItem="286-8C-QKd" firstAttribute="leading" secondItem="Edq-IR-En5" secondAttribute="leading" constant="10" id="5ug-OK-aKm"/>
+                            <constraint firstAttribute="trailing" secondItem="286-8C-QKd" secondAttribute="trailing" constant="10" id="FWQ-re-MkZ"/>
+                            <constraint firstItem="gGc-rd-TIi" firstAttribute="top" secondItem="Edq-IR-En5" secondAttribute="top" constant="10" id="Ugx-6j-5gb"/>
+                            <constraint firstItem="gGc-rd-TIi" firstAttribute="leading" secondItem="Edq-IR-En5" secondAttribute="leading" constant="10" id="aRC-5m-UHr"/>
+                            <constraint firstItem="bZa-gD-KK6" firstAttribute="bottom" secondItem="286-8C-QKd" secondAttribute="bottom" id="kud-8B-TOx"/>
+                            <constraint firstItem="286-8C-QKd" firstAttribute="top" secondItem="gGc-rd-TIi" secondAttribute="bottom" constant="10" id="riN-ki-m0I"/>
+                            <constraint firstAttribute="trailing" secondItem="gGc-rd-TIi" secondAttribute="trailing" constant="10" id="yLp-iX-b4G"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Edq-IR-En5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DJr-cJ-1hL"/>
+                <constraint firstItem="Edq-IR-En5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Iwf-6z-HUr"/>
+                <constraint firstAttribute="trailing" secondItem="Edq-IR-En5" secondAttribute="trailing" id="fdC-sJ-vfH"/>
+                <constraint firstAttribute="bottom" secondItem="Edq-IR-En5" secondAttribute="bottom" id="n11-S5-rXu"/>
+            </constraints>
+            <size key="customSize" width="252" height="265"/>
+            <connections>
+                <outlet property="detailImageView" destination="gGc-rd-TIi" id="qgg-9U-fPq"/>
+                <outlet property="nameDetailLabel" destination="286-8C-QKd" id="q5y-e4-TaA"/>
+            </connections>
+            <point key="canvasLocation" x="278.26086956521743" y="133.59375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="DarkGreen">
+            <color red="0.3411764705882353" green="0.70196078431372544" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NavigationBarBackground">
+            <color red="0.18823529411764706" green="0.21568627450980393" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

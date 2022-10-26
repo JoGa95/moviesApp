@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="MoviesApp" customModuleProvider="target">
+            <connections>
+                <outlet property="favoriteLabel" destination="6p6-xr-LUf" id="ghW-4s-QNh"/>
+                <outlet property="favoritesCollectionView" destination="kgI-ow-jOe" id="o17-qS-zkD"/>
+                <outlet property="profileLabel" destination="7E9-yG-s8p" id="G8X-TG-Knm"/>
+                <outlet property="userLabel" destination="Gag-RS-Tb6" id="p6o-hQ-SxW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7E9-yG-s8p">
+                    <rect key="frame" x="14" y="58" width="386" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" name="DarkGreen"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eac-ft-aRd">
+                    <rect key="frame" x="14" y="101" width="386" height="150"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_profile" translatesAutoresizingMaskIntoConstraints="NO" id="nRk-Nw-HQK">
+                            <rect key="frame" x="0.0" y="0.0" width="193" height="150"/>
+                            <color key="tintColor" name="DarkGreen"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="6Lt-Fu-Run"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gag-RS-Tb6">
+                            <rect key="frame" x="193" y="0.0" width="193" height="150"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                            <color key="textColor" name="DarkGreen"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FavoriteLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6p6-xr-LUf">
+                    <rect key="frame" x="14" y="437" width="386" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" name="DarkGreen"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kgI-ow-jOe">
+                    <rect key="frame" x="14" y="497" width="386" height="365"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cmw-Xy-i1r">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="BackgroundApp"/>
+            <constraints>
+                <constraint firstItem="kgI-ow-jOe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="01N-fS-Hca"/>
+                <constraint firstItem="kgI-ow-jOe" firstAttribute="top" secondItem="6p6-xr-LUf" secondAttribute="bottom" constant="36" id="3Rc-xq-hcD"/>
+                <constraint firstItem="6p6-xr-LUf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="5Ei-FU-pJ0"/>
+                <constraint firstItem="eac-ft-aRd" firstAttribute="top" secondItem="7E9-yG-s8p" secondAttribute="bottom" constant="14" id="Fxe-91-jqQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7E9-yG-s8p" secondAttribute="trailing" constant="14" id="Qti-lB-qg2"/>
+                <constraint firstItem="7E9-yG-s8p" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="VBS-jT-KOJ"/>
+                <constraint firstItem="6p6-xr-LUf" firstAttribute="top" secondItem="eac-ft-aRd" secondAttribute="bottom" constant="186" id="Vmq-PA-o92"/>
+                <constraint firstItem="eac-ft-aRd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="dHL-V5-dUz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kgI-ow-jOe" secondAttribute="trailing" constant="14" id="f3r-6D-oac"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eac-ft-aRd" secondAttribute="trailing" constant="14" id="kDl-Xd-EFi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6p6-xr-LUf" secondAttribute="trailing" constant="14" id="udB-3R-KPT"/>
+                <constraint firstItem="7E9-yG-s8p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="wHq-2M-Cuf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="kgI-ow-jOe" secondAttribute="bottom" id="wk6-9s-hx2"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="61.607142857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_profile" width="595" height="842"/>
+        <namedColor name="BackgroundApp">
+            <color red="0.078431372549019607" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DarkGreen">
+            <color red="0.3411764705882353" green="0.70196078431372544" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
